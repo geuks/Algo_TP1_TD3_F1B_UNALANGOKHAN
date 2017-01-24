@@ -1,0 +1,85 @@
+AlgoTriangles
+//BUT:Afficher 2 figures 
+//ENTREE:
+//SORTIE:afiche 2 triangles
+
+
+//BUT:Affiche un triangle XO
+//ENTREE:3 entier
+//SORTIE:Affiche triangle
+
+PROCEDURE TriangleX()
+VAR
+	nbr,i,j:ENTIER
+	
+DEBUT
+
+	ECRIRE 'Entrez un nombre'
+	LIRE nbr
+	POUR i DE 1 A nbr FAIRE		//colonne
+		
+		ECRIRE 'X'
+		
+		POUR j DE 1 A nbr FAIRE		//ligne
+			
+			SI (i=j) ALORS		//finir avec un X
+				ECRIRE 'X'
+			
+			SINON
+				SI j<i ALORS
+					ECRIRE 'O'		//Enlever le O
+				FINSI
+			FINSI
+			
+		FINPOUR
+		
+		ECRIRE
+	
+	FINPOUR
+	
+	POUR i DE 1 A nbr+1 FAIRE
+		
+		ECRIRE 'X'		//FIN du triangle
+	
+	FINPOUR
+
+FINPROCEDURE
+	
+	
+	
+//BUT:Afficher un triangle 0 a 9
+//ENTREE:3 entier
+//SORTIE:Affiche triangle
+
+PROCEDURE TriangleN()
+VAR
+	i,j,nbr:ENTIER
+	
+DEBUT
+
+	ECRIRE 'Entrez un nombre'
+	LIRE nbr
+	
+	POUR i DE 0 A nbr-1 FAIRE
+		
+		POUR j DE (nbr-i-1) FAIRE		//remplace DOWNTO
+		
+			ECRIRE i
+			
+		FINPOUR
+		
+	FINPOUR
+	
+FINPROCEDURE
+
+
+DEBUT
+
+
+	TriangleX()
+	
+	TriangleN()
+	
+FIN.
+		
+		
